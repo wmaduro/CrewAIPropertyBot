@@ -1,9 +1,12 @@
 import os
+import dotenv
 from crewai import Agent, Task, Crew
 from crewai_tools import SerperDevTool
 from langchain_community.llms import Ollama
 
-os.environ["SERPER_API_KEY"] = "a267dc1a84ac133e64128608f08910cf27d4f8b1"
+dotenv.load_dotenv()
+
+os.environ["SERPER_API_KEY"] = ""
 
 llm = Ollama(model="openhermes")
 
